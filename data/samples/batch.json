@@ -1,0 +1,39 @@
+{
+ "note": "Sample batch: the three companies, their people, investors, figures and documents are invented for this demo. The web research is real: the competitors, market reports and links it found are real.",
+ "startups": [
+  {
+   "id": "A",
+   "name": "Halcyra Materials",
+   "website": "",
+   "country": "Singapore",
+   "one_liner": "Recycles spent lithium-ion battery cathode material back to battery grade by direct regeneration, without smelting.",
+   "files": [
+    "A/Halcyra_seed_deck.pdf",
+    "A/Halcyra_kpi_sheet.xlsx",
+    "A/Halcyra_founder_call_notes.txt"
+   ]
+  },
+  {
+   "id": "B",
+   "name": "Orvelle Diagnostics",
+   "website": "",
+   "country": "Singapore",
+   "one_liner": "Rapid antimicrobial susceptibility test for bloodstream infections, with results in about 90 minutes.",
+   "files": [
+    "B/Orvelle_investor_brief.docx",
+    "B/Orvelle_validation_summary.md"
+   ]
+  },
+  {
+   "id": "C",
+   "name": "Brevanta AI",
+   "website": "",
+   "country": "Singapore",
+   "one_liner": "No-code builder of AI customer-service agents for e-commerce sellers in Southeast Asia.",
+   "files": [
+    "C/Brevanta_series_a_teaser.pdf",
+    "C/Brevanta_customer_metrics.csv"
+   ]
+  }
+ ]
+}
