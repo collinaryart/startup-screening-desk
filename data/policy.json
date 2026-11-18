@@ -1,0 +1,354 @@
+{
+  "scheme": "Startup SG Equity (SSGE)",
+  "read_on": "2026-11-16",
+  "note": "Every number here was read off the public pages listed under sources, rendered in a browser on the read date. Nothing comes from memory. Edit this file when a page changes.",
+  "sources": [
+    {
+      "id": "ssge_overview",
+      "title": "Startup SG Equity: overview",
+      "publisher": "Startup SG (Enterprise Singapore)",
+      "url": "https://www.startupsg.gov.sg/programmes/4895/startup-sg-equity",
+      "page_updated": "05 Oct 2026"
+    },
+    {
+      "id": "ssge_eligibility",
+      "title": "Startup SG Equity: eligibility and investment parameters",
+      "publisher": "Startup SG (Enterprise Singapore)",
+      "url": "https://www.startupsg.gov.sg/programmes/4895/startup-sg-equity/eligibility",
+      "page_updated": "05 Oct 2026",
+      "parameters_as_of": "27 Feb 2026"
+    },
+    {
+      "id": "ssge_faq",
+      "title": "Startup SG Equity: frequently asked questions",
+      "publisher": "Startup SG (Enterprise Singapore)",
+      "url": "https://www.startupsg.gov.sg/programmes/4895/startup-sg-equity/frequently-asked-questions",
+      "page_updated": "05 Oct 2026"
+    },
+    {
+      "id": "seeds_model",
+      "title": "SEEDS Capital: our co-investment model",
+      "publisher": "SEEDS Capital",
+      "url": "https://www.seedscapital.sg/about-us/our-co-investment-model/",
+      "page_updated": "2 July 2026"
+    },
+    {
+      "id": "seeds_faq",
+      "title": "SEEDS Capital: FAQs",
+      "publisher": "SEEDS Capital",
+      "url": "https://www.seedscapital.sg/about-us/faqs/",
+      "page_updated": "2 July 2026"
+    },
+    {
+      "id": "edb_release_2024",
+      "title": "Additional S$440 million to drive growth of deep tech (media release, 28 Oct 2024)",
+      "publisher": "Singapore Economic Development Board",
+      "url": "https://www.edb.gov.sg/en/about-edb/media-releases-publications/additional-440mil-in-funding-to-drive-growth-of-deep-tech-through-partnerships-with-prominent-global-venture-capitals.html",
+      "page_updated": "28 Oct 2024"
+    }
+  ],
+  "modalities": [
+    {
+      "key": "co_investment",
+      "label": "Co-investment (early stage)",
+      "manager": "SG Growth Capital or SGInnovate",
+      "summary": "The government invests alongside an independent, qualified third-party investor, on the published ratios.",
+      "sources": [
+        "ssge_overview",
+        "ssge_eligibility"
+      ]
+    },
+    {
+      "key": "direct",
+      "label": "Direct investment (growth stage)",
+      "manager": "SG Growth Capital",
+      "summary": "SG Growth Capital can lead or co-lead, in a round with at least one other institutional investor. No ratio is published.",
+      "sources": [
+        "ssge_overview",
+        "ssge_eligibility"
+      ]
+    },
+    {
+      "key": "fund_of_funds",
+      "label": "Fund-of-funds",
+      "manager": "SG Growth Capital",
+      "summary": "Investment in venture capital funds (minimum fund size S$30 million). Not used by this app.",
+      "sources": [
+        "ssge_overview",
+        "ssge_eligibility"
+      ]
+    }
+  ],
+  "tracks": {
+    "deep_tech": {
+      "label": "Deep tech",
+      "cap": 12000000,
+      "tiers": [
+        {
+          "upto": 1000000,
+          "gov": 2,
+          "co": 1,
+          "first_round_only": true,
+          "otherwise": {
+            "gov": 1,
+            "co": 1
+          }
+        },
+        {
+          "upto": 4000000,
+          "gov": 1,
+          "co": 1
+        },
+        {
+          "upto": 8000000,
+          "gov": 1,
+          "co": 2
+        },
+        {
+          "upto": 12000000,
+          "gov": 1,
+          "co": 3
+        }
+      ],
+      "sources": [
+        "ssge_eligibility",
+        "seeds_model"
+      ],
+      "conflict": ""
+    },
+    "general_tech": {
+      "label": "General tech",
+      "cap": 2000000,
+      "tiers": [
+        {
+          "upto": 250000,
+          "gov": 7,
+          "co": 3
+        },
+        {
+          "upto": 2000000,
+          "gov": 1,
+          "co": 1
+        }
+      ],
+      "sources": [
+        "seeds_model"
+      ],
+      "conflict": "Two official pages differ. The SEEDS Capital page (updated 2 July 2026) still lists a general tech row. The Startup SG eligibility page (updated 05 Oct 2026, parameters as of 27 Feb 2026) describes the scheme for deep tech start-ups only. The app shows this row for reference and never recommends capital on it. Confirm with the team."
+    }
+  },
+  "focus_domains": [
+    "Advanced Manufacturing",
+    "Pharmbio / MedTech",
+    "Agrifood Tech",
+    "Sustainability (energy, circular economy, urban mobility)",
+    "Spacetech",
+    "Smart Nation and Digital Economy deep tech (quantum, cybersecurity, generative AI)"
+  ],
+  "gates": [
+    {
+      "key": "sg_registered",
+      "label": "Singapore-registered private limited company",
+      "hard": true,
+      "source": "ssge_eligibility"
+    },
+    {
+      "key": "age",
+      "label": "Incorporated 10 years or less",
+      "hard": true,
+      "source": "ssge_eligibility",
+      "note": "The FAQ says the 10-year limit does not extend to growth-stage start-ups."
+    },
+    {
+      "key": "sg_innovation",
+      "label": "Develops or possesses its innovations in Singapore",
+      "hard": true,
+      "source": "ssge_eligibility"
+    },
+    {
+      "key": "deep_tech",
+      "label": "Deep tech: owns research-based IP that is differentiated or proprietary",
+      "hard": true,
+      "source": "ssge_overview"
+    },
+    {
+      "key": "focus_domain",
+      "label": "Primary focus in one of the six listed domain areas",
+      "hard": false,
+      "source": "ssge_eligibility"
+    },
+    {
+      "key": "co_investor",
+      "label": "Independent third-party co-investor with a matching commitment",
+      "hard": false,
+      "source": "seeds_faq"
+    },
+    {
+      "key": "not_excluded",
+      "label": "Not an excluded activity (real estate development, consultancy, gambling, HR recruitment, tobacco, loan and lease finance)",
+      "hard": true,
+      "source": "seeds_faq"
+    }
+  ],
+  "criteria": [
+    {
+      "key": "innovation_ip",
+      "label": "Innovation and IP",
+      "weight": 20,
+      "basis": "SEEDS Capital attribute 1: substantial innovative or intellectual property content developed or owned in-house.",
+      "source": "seeds_faq",
+      "anchors": [
+        "1: no IP of its own",
+        "2: IP is claimed but nothing is filed or shown",
+        "3: patent applications filed or proprietary know-how, not yet tested outside the lab",
+        "4: patents filed or granted, plus pilot or validation data showing the technology works",
+        "5: granted patents in key markets and performance confirmed by an independent party"
+      ]
+    },
+    {
+      "key": "commercial_viability",
+      "label": "Commercial viability and traction",
+      "weight": 20,
+      "basis": "SEEDS Capital attribute 2: a commercially viable business model, including some pilot or paying customers.",
+      "source": "seeds_faq",
+      "anchors": [
+        "1: no customers and no clear model",
+        "2: pre-revenue, with pilots or studies agreed but not started",
+        "3: pilots running or first revenue",
+        "4: paying customers, with renewals or growing revenue",
+        "5: strong recurring revenue and sound unit economics"
+      ]
+    },
+    {
+      "key": "value_prop_scalability",
+      "label": "Value proposition and scalability",
+      "weight": 15,
+      "basis": "SEEDS Capital attribute 3: a clear value proposition that can scale in its customer segment and across international markets.",
+      "source": "seeds_faq",
+      "anchors": [
+        "1: unclear who buys it or why",
+        "2: clear in one niche; the path to scale is not addressed",
+        "3: clear value proposition and a credible plan to scale",
+        "4: value shown in customer results or data, with a funded plan to scale beyond Singapore",
+        "5: already selling across several markets"
+      ]
+    },
+    {
+      "key": "management_team",
+      "label": "Management team",
+      "weight": 15,
+      "basis": "SEEDS Capital attribute 4: a committed and capable management team with relevant experience, receptive to guidance from co-investors.",
+      "source": "seeds_faq",
+      "anchors": [
+        "1: the evidence shows key roles unfilled and no relevant experience",
+        "2: gaps in key roles",
+        "3: relevant experience in the core roles",
+        "4: experienced team covering technology, operations and commercial, with industry track records",
+        "5: repeat founders with exits, or senior industry leaders"
+      ]
+    },
+    {
+      "key": "market_potential",
+      "label": "Market potential",
+      "weight": 10,
+      "basis": "Size and growth of the market the product sells into, from independent sources where they exist.",
+      "source": "",
+      "anchors": [
+        "1: a small market on the evidence",
+        "2: a niche under US$1 billion",
+        "3: US$1 billion to US$10 billion, growing",
+        "4: over US$10 billion, or growing over 20% a year, on an independent source",
+        "5: very large and fast-growing, on several independent sources that agree"
+      ]
+    },
+    {
+      "key": "competitive_position",
+      "label": "Competitive position",
+      "weight": 10,
+      "basis": "Who else sells this, how the start-up differs, and how much of a customer's spend it already wins (share of wallet).",
+      "source": "",
+      "anchors": [
+        "1: stronger rivals and no difference shown",
+        "2: a difference is claimed only",
+        "3: a clear technical difference; rivals are better funded",
+        "4: differentiated, with customer wins or a meaningful share of a customer's spend",
+        "5: the clear leader in its segment"
+      ]
+    },
+    {
+      "key": "singapore_relevance",
+      "label": "Relevance to Singapore",
+      "weight": 10,
+      "basis": "Strategic and economic relevance: innovation, jobs and operations anchored in Singapore, in a listed focus area.",
+      "source": "ssge_faq",
+      "anchors": [
+        "1: no Singapore presence",
+        "2: registered in Singapore only",
+        "3: team and R&D in Singapore",
+        "4: R&D, IP and most jobs in Singapore, in a listed focus area",
+        "5: as 4, plus manufacturing or regional operations anchored in Singapore"
+      ]
+    }
+  ],
+  "stage_modality": {
+    "co_investment": [
+      "pre-seed",
+      "seed",
+      "series a",
+      "series b"
+    ],
+    "direct": [
+      "series c",
+      "series c+",
+      "growth",
+      "late stage"
+    ]
+  },
+  "decision_rules": {
+    "meet_min_score": 45,
+    "full_match_min_score": 70,
+    "full_match_min_confidence": 0.6,
+    "staged_min_score": 55,
+    "staged_fraction": 0.5,
+    "round_to": 10000,
+    "decide_min_coverage": 0.5,
+    "decide_min_rated": 0.6
+  },
+  "assumptions": [
+    "Tier limits are read as the government's own cumulative investment in the start-up (the SEEDS Capital page words them as 'from SEEDS').",
+    "The 2:1 first tier applies only to a first institutional round; when the documents do not say, the app uses 1:1, the lower figure.",
+    "Earlier government equity in the start-up counts toward the S$12 million cap; when the documents do not mention any, the app assumes none and says so.",
+    "Pre-seed to Series B is treated as early stage (co-investment) and Series C onward as growth stage (direct). The EDB release of 28 Oct 2024 describes early to early-growth as roughly Seed to Series B/C; the split is this app's assumption.",
+    "The matched amount is a ceiling under the published schedule. It is not a valuation and not a decision; the team decides.",
+    "Amounts are in Singapore dollars. A round quoted in another currency is not converted; the calculator is left for the reviewer.",
+    "When under half of what the desk looks for was found, or under 60% of the score's weight could be rated, the app makes no first-meeting call and suggests getting the company's documents: little public evidence is not the same as a weak company."
+  ],
+  "workstreams_basis": "What a portfolio growth team works across, in the words of SG Growth Capital's own job posting for that team: Singapore landing plans, go-to-market access, R&D and centre-of-excellence development, and talent support; investor engagement is from the same posting's list of programmes.",
+  "workstreams": [
+    {
+      "key": "gtm_access",
+      "label": "Go-to-market access",
+      "covers": "customers, pilots, partners, suppliers, channels and introductions"
+    },
+    {
+      "key": "landing_plan",
+      "label": "Singapore landing plan",
+      "covers": "setting up or expanding operations, sites and regulatory steps in Singapore"
+    },
+    {
+      "key": "rnd_coe",
+      "label": "R&D and centre of excellence",
+      "covers": "research partners, laboratories, pilot lines, validation studies and scale-up"
+    },
+    {
+      "key": "talent",
+      "label": "Talent",
+      "covers": "key roles that are missing, and hiring as the team grows"
+    },
+    {
+      "key": "investors",
+      "label": "Investor engagement",
+      "covers": "lead investors and co-investors for the round"
+    }
+  ]
+}
