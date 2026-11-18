@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Startup Screening Desk</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">S</div>
+    <div>
+      <h1>Startup Screening Desk</h1>
+      <p>Is this start-up worth a first meeting, what would it need from the team, and how much could be co-invested?</p>
+    </div>
+  </div>
+  <div class="top-right">
+    <span id="mode" class="pill" title=""></span>
+    <label class="reviewer">Reviewer <input id="reviewer" type="text" placeholder="your name" maxlength="60" autocomplete="off"></label>
+    <button id="runsBtn" class="btn ghost" type="button">Past runs</button>
+  </div>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+
+<main>
+  <!-- 1. set-up -->
+  <section id="setup" class="panel">
+    <div class="panel-head">
+      <div><span class="step">1</span><h2>Start-ups to screen</h2></div>
+      <div class="actions">
+        <button id="sampleBtn" class="btn" type="button">Load sample batch</button>
+        <button id="clearBtn" class="btn ghost" type="button">Clear</button>
+      </div>
+    </div>
+    <p class="hint">Add what you know. The desk searches the public web with the name, website and one-line description only. Upload anything the company sent: early-stage companies keep most of their facts off the web.</p>
+    <div id="cards" class="cards"></div>
+
+    <div class="startbar">
+      <button id="startBtn" class="btn start" type="button"><span class="play" aria-hidden="true"></span>Start</button>
+      <div class="startmeta">
+        <div id="startHint" class="hint"></div>
+        <details id="settings">
+          <summary>Run settings</summary>
+          <div class="settings">
+            <label>Judge model <select id="judgeModel"></select><small>builds the profile, rates it, writes the briefing</small></label>
+            <label>Reader model <select id="readerModel"></select><small>reads documents and searches the web</small></label>
+            <label>Web searches per start-up <select id="maxSearches"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label>
+            <label class="check"><input id="webOn" type="checkbox" checked> Search the public web</label>
+          </div>
+        </details>
+      </div>
+      <button id="recordedBtn" class="btn ghost" type="button" hidden>Play the recorded run</button>
+    </div>
+  </section>
+
+  <!-- 2. progress -->
+  <section id="progress" class="panel" hidden>
+    <div class="panel-head">
+      <div><span class="step">2</span><h2>What the desk is doing</h2></div>
+      <div id="clock" class="clock" aria-live="polite"></div>
+    </div>
+    <div id="lanes" class="lanes"></div>
+    <div id="batchSteps" class="batchsteps"></div>
+  </section>
+
+  <!-- 3. results -->
+  <section id="results" hidden></section>
+</main>
+
+<footer class="foot">
+  <p><strong>Prototype.</strong> Not connected to any organisation's systems. Co-investment figures follow the published Startup SG Equity schedule, read on <span id="policyDate"></span>; see Basis at the end of a result. Amounts are ceilings under that schedule, not valuations or commitments. A person makes every decision.</p>
+</footer>
+
+<div id="pop" class="pop" hidden role="dialog" aria-label="Source"></div>
+<div id="modal" class="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose" class="btn ghost" type="button">Close</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div id="toast" class="toast" hidden role="status"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
