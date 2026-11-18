@@ -144,5 +144,3 @@ python -m pytest -q
 ```
 
 The tests include the buttons driven through the HTTP layer (Yes, No, Accept, Accept this plan, the weights panel, the memo, document upload).
-
-Claude Code wrote this code on 16 Nov 2026 from a brief; the brief, the testing and the reading of its mistakes are the author's.
